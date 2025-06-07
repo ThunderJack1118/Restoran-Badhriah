@@ -31,7 +31,7 @@ $conn->query("UPDATE `tables` SET status = 'available', waiter = NULL");
 $conn->query("UPDATE `tables` t 
               JOIN `order` o ON t.number = o.number 
               SET t.status = 'occupied', t.waiter = (SELECT Username FROM staff WHERE StaffID = o.StaffID)
-              WHERE o.O_Status IN ('Pending', 'Preparing', 'Ready')");
+              WHERE o.O_Status IN ('Pending', 'In Progress', 'Completed')");
 
 // Get table statistics
 $stats = [
