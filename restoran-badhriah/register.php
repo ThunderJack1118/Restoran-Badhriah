@@ -124,7 +124,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <option value="Waiter">Waiter</option>
         <option value="Cashier">Cashier</option>
         <option value="Chef">Chef</option>
-        <option value="Manager">Manager</option>
       </select>
 
       <label for="Phone">Phone Number</label>
